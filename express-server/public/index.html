@@ -1,0 +1,90 @@
+﻿<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="Recruit2019">
+<head>
+	<!-- META -->
+	<meta charset="utf-8"><!-- Set charset Unicode -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>华南理工大学微软学生俱乐部2019年度秋季招新</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap widget -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"><!-- load bootstrap font -->
+	
+	<link href="./css/dashboard.css" rel="stylesheet"><!-- load bootstrap dashboard page css -->
+	<link href="./css/theme.css" rel="stylesheet"><!-- load bootstrap theme page css -->
+	<link href="./css/style.css" rel="stylesheet"><!-- load style css -->
+	<link href="./css/signin.css" rel="stylesheet"><!-- load bootstrap signin page css -->
+	
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 					{ padding-top:50px; }
+		#todo-list 				{ margin-bottom:30px; }
+		#todo-form 	 			{ margin-bottom:50px; }
+	</style>
+
+	<!-- SPELLS -->
+	<script src="//cdn.bootcss.com/angular.js/1.2.16/angular.min.js"></script><!-- load angular -->
+
+	<script src="js/controllers/users.js"></script> <!-- load up our user controller -->
+	<script src="js/services/users.js"></script> <!-- load our user service -->
+	<script src="js/core.js"></script> <!-- load our main application -->
+
+</head>
+
+<!-- SET THE CONTROLLER -->
+<body ng-controller="mainController">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<!-- 顶部导航栏 -->
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<!-- 项目名称 -->
+				<a class="navbar-brand" href="#">华南理工大学微软学生俱乐部2019年度秋季招新</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<!-- 导航项 -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">华南理工大学微软学生俱乐部</a></li>
+					<li><a href="#">活动中心</a></li>
+					<li><a href="#">技术博客</a></li>
+					<li><a href="#">关于我们</a></li>
+				</ul>
+				<!-- 搜索框 -->
+				<form class="navbar-form navbar-right">
+					<input type="text" class="form-control" placeholder="Search transactions...">
+				</form>
+			</div>
+		</div>
+	</nav>
+		
+	<!-- 登录界面-->
+	<div class="login" ng-show="!isLogin">
+		<div class="login-top">
+			Welcome to SCUT M$C！
+		</div>
+		<div class="login-center clearfix">
+			<div class="login-center-img"><img src="img/name.png"/></div>
+			<div class="login-center-input">
+				<input type="text" name="" value="" placeholder="Please enter your id." onfocus="this.placeholder=''" onblur="this.placeholder='Please input your id.'" ng-model="userBody.id"/>
+				<div class="login-center-input-text">学号</div>
+			</div>
+		</div>
+		<div class="login-center clearfix">
+			<div class="login-center-img"><img src="img/password.png"/></div>
+			<div class="login-center-input">
+				<input type="password" name="" value="" placeholder="Please enter your name." onfocus="this.placeholder=''" onblur="this.placeholder='Please input your name.'" ng-model="userBody.name"/>
+				<div class="login-center-input-text">姓名</div>
+			</div>
+		</div>
+		<div class="col-sm-4 col-sm-offset-1 text-center">
+			<button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="signUp()">提交</button>
+		</div>
+		<div class="col-sm-4 col-sm-offset-2 text-center">
+			<button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="signIn()">保存</button>
+		</div>
+	</div>
+
+</body>
+</html>
