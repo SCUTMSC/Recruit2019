@@ -14,10 +14,11 @@ function addUser(req, res) {
         email: req.body.email,
         first_choice: req.body.first_choice,
         second_choice: req.body.second_choice,
+        introduction: req.body.introduction,
         done: false
     }, function (err, users) {
         if (err) res.send(err); // 失败则返回错误信息
-        else getUsers(users); // 成功则返回查看列表
+        // else getUsers(users); // 成功则返回查看列表
     });
 }
 
@@ -26,7 +27,7 @@ function deleteUser(req, res) {
         _id: req.params.user_id
     }, function (err, users) {
         if (err) res.send(err); // 失败则返回错误信息
-        else getUsers(users); // 成功则返回查看列表
+        // else getUsers(users); // 成功则返回查看列表
     });
 }
 
@@ -51,9 +52,9 @@ function updateUser(req, res) {
     console.log('id: ' + whereId);
     var updateBody = req.body;
     console.log('body:' + updateBody);
-    User.update(whereId, updateBody, function (err, user) {
+    User.update(whereId, updateBody, function (err, users) {
         if (err) res.send(err); // 失败则返回错误信息
-        else getUsers(user); // 成功则返回特定用户
+        // else getUsers(users); // 成功则返回特定用户
     });
 };
 

@@ -68,4 +68,10 @@ module.exports = mongoose.model('User', {
     type: String,
     default: ''
   },
+
+  // 自我介绍
+  introduction: {
+    type: String,
+    default: ''
+  },
 });
