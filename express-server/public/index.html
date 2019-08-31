@@ -38,8 +38,9 @@
 
 </head>
 
-
 <body ng-controller="mainController">
+	
+	<!-- Top anchor -->
 	<div id="topAnchor"></div>
 	
 	<!-- Fixed navbar -->
@@ -56,7 +57,7 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#index">首页</a></li>
+					<li><a href="#index">首页</a></li>
 					<li><a href="#activity">活动</a></li>
 					<li><a href="#about">关于</a></li>
 					<!--<li class="dropdown">
@@ -81,45 +82,44 @@
 		</div>
 	</nav>
 
-	<!-- Divide the navbar and container
-	================================================== -->
+	<!-- Blank division -->
 	<div class="divide"></div>
 
 	<!-- Marketing messaging and featurettes
 	================================================== -->
 	<!-- Wrap the rest of the page in another container to center all the content. -->
-
 	<div class="container marketing">
-    <div class="row row-offcanvas row-offcanvas-right">
+    <!-- CONTENT -->
+		<div class="row row-offcanvas row-offcanvas-right">
       <div class="col-xs-12 col-sm-9">
         <p class="pull-right visible-xs">
           <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-        </p>
+        </p><!--/toggle nav-->
         <div class="jumbotron">
           <h2>欢迎加入</h2>
 					<h1>SCUT MSC!</h1>
           <p>请同学们在下列表单中填写个人信息并点击完成填写，即可参加华南理工大学微软学生俱乐部2019年度秋季招新。没时间解释了! 快上车 ( </p>
-        </div>
+        </div><!--/jumbotron-->
         <div class="row">
           <div class="col-xs-6 col-lg-4">
             <div class="login-center clearfix">
 							<div class="login-center-img"><img src="img/bianhao.png"/></div>
 							<div class="login-center-input">
-								<input type="text" name="" value="" placeholder="请输入学号" onfocus="this.placeholder=''" onblur="this.placeholder='请输入学号'" ng-model="userBody.id"/>
+								<input type="text" name="" value="" placeholder="学号" onfocus="this.placeholder=''" onblur="this.placeholder='学号'" ng-model="userBody.id"/>
 								<div class="login-center-input-text">学号</div>
 							</div>
 						</div>
 						<div class="login-center clearfix">
 							<div class="login-center-img"><img src="img/zhenshixingming.png"/></div>
 							<div class="login-center-input">
-								<input type="text" name="" value="" placeholder="请输入姓名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入姓名'" ng-model="userBody.name"/>
+								<input type="text" name="" value="" placeholder="姓名" onfocus="this.placeholder=''" onblur="this.placeholder='姓名'" ng-model="userBody.name"/>
 								<div class="login-center-input-text">姓名</div>
 							</div>
 						</div>
 						<div class="login-center clearfix">
 							<div class="login-center-img"><img src="img/tongxingbie.png"/></div>
 							<div class="login-center-input">
-								<input type="text" name="" value="" placeholder="请输入性别" onfocus="this.placeholder=''" onblur="this.placeholder='请输入性别'" ng-model="userBody.gender"/>
+								<input type="text" name="" value="" placeholder="性别" onfocus="this.placeholder=''" onblur="this.placeholder='性别'" ng-model="userBody.gender"/>
 								<div class="login-center-input-text">性别</div>
 							</div>
 						</div>
@@ -128,21 +128,21 @@
             <div class="login-center clearfix">
 							<div class="login-center-img"><img src="img/nianji.png"/></div>
 							<div class="login-center-input">
-								<input type="text" name="" value="" placeholder="请输入年级" onfocus="this.placeholder=''" onblur="this.placeholder='请输入年级'" ng-model="userBody.grade"/>
+								<input type="text" name="" value="" placeholder="年级" onfocus="this.placeholder=''" onblur="this.placeholder='年级'" ng-model="userBody.grade"/>
 								<div class="login-center-input-text">年级</div>
 							</div>
 						</div>
 						<div class="login-center clearfix">
 							<div class="login-center-img"><img src="img/xueyuan.png"/></div>
 							<div class="login-center-input">
-								<input type="text" name="" value="" placeholder="请输入学院" onfocus="this.placeholder=''" onblur="this.placeholder='请输入学院'" ng-model="userBody.college"/>
+								<input type="text" name="" value="" placeholder="学院" onfocus="this.placeholder=''" onblur="this.placeholder='学院'" ng-model="userBody.college"/>
 								<div class="login-center-input-text">学院</div>
 							</div>
 						</div>
 						<div class="login-center clearfix">
 							<div class="login-center-img"><img src="img/jigouguanli.png"/></div>
 							<div class="login-center-input">
-								<input type="text" name="" value="" placeholder="请输入专业" onfocus="this.placeholder=''" onblur="this.placeholder='请输入专业'" ng-model="userBody.major"/>
+								<input type="text" name="" value="" placeholder="专业" onfocus="this.placeholder=''" onblur="this.placeholder='专业'" ng-model="userBody.major"/>
 								<div class="login-center-input-text">专业</div>
 							</div>
 						</div>
@@ -151,21 +151,21 @@
             <div class="login-center clearfix">
 							<div class="login-center-img"><img src="img/dizhi.png"/></div>
 							<div class="login-center-input">
-								<input type="text" name="" value="" placeholder="请输入住址" onfocus="this.placeholder=''" onblur="this.placeholder='请输入住址'" ng-model="userBody.address"/>
+								<input type="text" name="" value="" placeholder="住址(E.g.C10-101)" onfocus="this.placeholder=''" onblur="this.placeholder='住址(E.g.C10-101)'" ng-model="userBody.address"/>
 								<div class="login-center-input-text">住址</div>
 							</div>
 						</div>
 						<div class="login-center clearfix">
 							<div class="login-center-img"><img src="img/dianhua.png"/></div>
 							<div class="login-center-input">
-								<input type="text" name="" value="" placeholder="请输入手机" onfocus="this.placeholder=''" onblur="this.placeholder='请输入手机'" ng-model="userBody.phone"/>
+								<input type="text" name="" value="" placeholder="手机(留意&回复面试短信~)" onfocus="this.placeholder=''" onblur="this.placeholder='手机(请留意并回复面试短信~)'" ng-model="userBody.phone"/>
 								<div class="login-center-input-text">手机</div>
 							</div>
 						</div>
 						<div class="login-center clearfix">
 							<div class="login-center-img"><img src="img/youxiang.png"/></div>
 							<div class="login-center-input">
-								<input type="email" name="" value="" placeholder="请输入邮箱" onfocus="this.placeholder=''" onblur="this.placeholder='请输入邮箱'" ng-model="userBody.email"/>
+								<input type="email" name="" value="" placeholder="邮箱(留意&回复面试邮件~)" onfocus="this.placeholder=''" onblur="this.placeholder='邮箱(请留意并回复面试邮件~)'" ng-model="userBody.email"/>
 								<div class="login-center-input-text">邮箱</div>
 							</div>
 						</div>
@@ -174,30 +174,30 @@
             <div class="login-center clearfix">
 							<div class="login-center-img"><img src="img/first.png"/></div>
 							<div class="login-center-input">
-								<input type="text" name="" value="" placeholder="请输入第一志愿" onfocus="this.placeholder=''" onblur="this.placeholder='请输入第一志愿'" ng-model="userBody.first_choice"/>
+								<input type="text" name="" value="" placeholder="第一志愿" onfocus="this.placeholder=''" onblur="this.placeholder='第一志愿'" ng-model="userBody.first_choice"/>
 								<div class="login-center-input-text">第一志愿</div>
 							</div>
 						</div>
 						<div class="login-center clearfix">
 							<div class="login-center-img"><img src="img/second.png"/></div>
 							<div class="login-center-input">
-								<input type="text" name="" value="" placeholder="请输入第二志愿" onfocus="this.placeholder=''" onblur="this.placeholder='请输入第二志愿'" ng-model="userBody.second_choice"/>
+								<input type="text" name="" value="" placeholder="第二志愿" onfocus="this.placeholder=''" onblur="this.placeholder='第二志愿'" ng-model="userBody.second_choice"/>
 								<div class="login-center-input-text">第二志愿</div>
 							</div>
 						</div>
-					</div>
+					</div><!--/.col-xs-6.col-lg-4-->
 					<div class="col-xs-6 col-lg-4">
 						<div class="login-center clearfix">
 							<div class="login-center-img"><img src="img/jieshao.png"/></div>
 							<div class="login-center-textarea">
-								<textarea rows="5" name="" value="" cols="23" placeholder="请输入自我介绍 (例如：学习能力、已有基础、兴趣爱好…)" ng-model="userBody.introduction"></textarea>
+								<textarea rows="5" name="" value="" cols="23" placeholder="自我介绍(E.g.学习能力、已有基础…)" onfocus="this.placeholder=''" onblur="this.placeholder='自我介绍(E.g.学习能力、已有基础…)'" ng-model="userBody.introduction"></textarea>
 								<div class="login-center-textarea-text">自我介绍</div>
 							</div>
 						</div>
-					</div>
+					</div><!--/.col-xs-6.col-lg-4-->
 					<div class="col-xs-6 col-lg-4">
-						<h2>Microsoft</h2>
-						<p>予力众生 成就非凡</p>
+						<img src="/img/ms-logo.png"/>
+						<p>予力众生 成就非凡<p>
 						<p><a class="btn btn-default" href="#" role="button" type="submit" ng-click="enroll()">完成填写 &raquo;</a></p>
 					</div><!--/.col-xs-6.col-lg-4-->
         </div><!--/row-->
@@ -219,6 +219,7 @@
       </div><!--/.sidebar-offcanvas-->
     </div><!--/row-->
 
+		<!-- Line division -->
     <hr>
 
 		<!-- FOOTER -->
