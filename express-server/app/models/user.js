@@ -21,6 +21,12 @@ module.exports = mongoose.model('User', {
     default: ''
   },
 
+  // 学生校区
+  campus: {
+    type: String,
+    default: ''
+  },
+  
   // 学生年级
   grade: {
     type: Number,

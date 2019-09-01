@@ -6,6 +6,7 @@ function addUser(req, res) {
         id: req.body.id,
         name: req.body.name,
         gender: req.body.gender,
+        campus: req.body.campus,
         grade: req.body.grade,
         college: req.body.college,
         major: req.body.major,
