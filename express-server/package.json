@@ -1,0 +1,16 @@
+{
+  "name": "recruit-2019",
+  "version": "0.0.1",
+  "description": "SCUT Microsoft Student Club Recruitment 2019",
+  "repository": "",
+  "license": "MIT",
+  "main": "server.js",
+  "author": "Charlotte Wong",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.13.4",
+    "method-override": "^2.1.3",
+    "mongoose": "^4.4.12",
+    "morgan": "^1.1.1"
+  }
+}
