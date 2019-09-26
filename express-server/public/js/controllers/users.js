@@ -1,5 +1,6 @@
 angular.module('userController', [])
 	.controller('mainController', ['$scope', 'Users', function($scope, Users) {
+		alert("经部分同学反馈，使用微信内置浏览器无法成功报名。请同学们点击右上角选择使用浏览器打开本报名链接，以免由于兼容问题造成数据丢失。给大家带来不便，十分抱歉！");
 		
 		$scope.userBody = {};
 		
