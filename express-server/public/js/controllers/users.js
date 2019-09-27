@@ -5,19 +5,31 @@ angular.module('userController', [])
 		$scope.userBody = {};
 		
 		$scope.enroll = function() {
-			var msg = JSON.stringify($scope.userBody);
-			console.log("前端上传：\n" + msg);
+			// var msg = JSON.stringify($scope.userBody);
+			// console.log("前端上传：\n" + msg);
 
-			Users.create($scope.userBody).success(function(data) {				
+			Users.getById($scope.userBody).success(function(data) {				
+				if(data.status) {		
+					if(data.result.length === 0) {
+						// console.log("首次填写");
+						Users.create($scope.userBody).success(function(data) { $scope.userBody = {}; });
+					}
+					else { 
+						// console.log("重复填写");
+						Users.putById($scope.userBody).success(function(data) { $scope.userBody = {}; })
+					}
+					alert(data.msg);
+				}
+				else {
+					alert(data.msg);
 					$scope.userBody = {};
+				}
 			});
-
-			alert("您已成功报名！");
 			
-			Users.get().success(function(data) {
-				var msg = JSON.stringify(data);
-				console.log("后端返回：\n" + msg);
-			});
+			// Users.get().success(function(data) {
+			// 	var msg = JSON.stringify(data);
+			// 	console.log("后端返回：\n" + msg);
+			// });
 		};
 
 	}]);
