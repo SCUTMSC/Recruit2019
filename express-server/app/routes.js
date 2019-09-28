@@ -84,9 +84,9 @@ function updateUserById(req, res) {
 // 暴露数据库接口
 module.exports = function (app) {
 
-    app.get('/api/users', function (req, res) {
-        getUsers(res);
-    });
+    // app.get('/api/users', function (req, res) {
+    //     getUsers(res);
+    // });
 
     app.post('/api/query_user', function (req, res) {
         getUserById(req, res);
